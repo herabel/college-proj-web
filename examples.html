@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet" />
+  <title>Главная</title>
+</head>
+<body>
+  <header>
+    <h1 class="header-title"><a href="index.html">Главная</a></h1>
+    <h1 class="header-theory"><a href="theory.html">Теория</a></h1>
+    <h1 class="header-color-main"><a href="color_main.html">Цветокорректор</a></h1>
+    <h1 class="header-examples current"><a href="examples.html">Примеры</a></h1>
+    <h1 class="header-contacts"><a href="contacts.html">Контакты</a></h1>
+  </header>
+  <main class="main">
+    <div class="main-content">
+        <div class="main-content-title">Примеры работ</div>
+        <div id="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <div id="slides">
+               <div id="overflow">
+                  <div class="inner">
+                     <div class="slide slide_1">
+                        <div class="slide-content">
+                           <img src="assets/slides-examples/slide1.jpg" alt="slide1">
+                        </div>
+                     </div>
+                     <div class="slide slide_2">
+                        <div class="slide-content">
+                           <img src="assets/slides-examples/slide2.jpg" alt="slide2">
+                        </div>
+                     </div>
+                     <div class="slide slide_3">
+                        <div class="slide-content">
+                           <img src="assets/slides-examples/slide3.jpg" alt="slide3">
+                        </div>
+                     </div>
+                     <div class="slide slide_4">
+                        <div class="slide-content">
+                           <img src="assets/slides-examples/slide4.jpg" alt="slide4">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="controls">
+               <label for="slide1"></label>
+               <label for="slide2"></label>
+               <label for="slide3"></label>
+               <label for="slide4"></label>
+            </div>
+            <div id="bullets">
+               <label for="slide1"></label>
+               <label for="slide2"></label>
+               <label for="slide3"></label>
+               <label for="slide4"></label>
+            </div>
+         </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <a class="github" href="#" target="_blank" rel="noopener noreferrer">Github</a>
+    </div>
+  </footer>
+  <link href="style.css" rel="stylesheet" />
+  <script src="bg.js"></script>
+</body>
+</html>

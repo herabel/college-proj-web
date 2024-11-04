@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <title>PhotoFilter</title>
+  <style>
+    .main{
+      padding-top: 0px;
+      max-width: 90%;
+    }
+    @media (max-width: 1024px){
+      .main{
+        margin-bottom: 2vh;
+        display: flex;
+        justify-content: center;
+      }
+      .filters{
+      margin-top: 2vh;
+      padding-top: 0px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="header-title"><a href="index.html">Главная</a></h1>
+    <h1 class="header-theory"><a href="theory.html">Теория</a></h1>
+    <h1 class="header-color-main current"><a href="color_main.html">Цветокорректор</a></h1>
+    <h1 class="header-examples"><a href="examples.html">Примеры</a></h1>
+    <h1 class="header-contacts"><a href="contacts.html">Контакты</a></h1>
+</header>
+  <main class="main center">
+    <div class="filters">
+      <label>
+        <span class="term" data-filter="blur(10px)">Blur:</span>
+        <input name="blur" data-sizing="px" type="range" min="0" max="10" value="0" />
+        <output name="result">0</output>
+      </label>
+      <label>
+        <span class="term" data-filter="invert(1)">Invert:</span>
+        <input name="invert" data-sizing="%" type="range" min="0" max="100" value="0" />
+        <output name="result">0</output>
+      </label>
+      <label>
+        <span class="term" data-filter="sepia(1)">Sepia:</span>
+        <input name="sepia" data-sizing="%" type="range" min="0" max="100" value="0" />
+        <output name="result">0</output>
+      </label>
+      <label>
+        <span class="term" data-filter="saturate(2)">Saturate:</span>
+        <input name="saturate" data-sizing="%" type="range" min="0" max="200" value="100" />
+        <output name="result">100</output>
+      </label>
+      <label>
+        <span class="term" data-filter="hue-rotate(200deg)">Hue rotate:</span>
+        <input name="hue-rotate" data-sizing="deg" type="range" min="0" max="360" value="0" />
+        <output name="result">0</output>
+      </label>
+    </div>
+    <div class="editor">
+      <div class="btn-container">
+        <button class="btn btn-reset">Reset</button>
+        <label class="btn btn-load" for="btnInput">
+          Load picture
+          <input class="btn-load--input" id="btnInput" name="upload" type="file" />
+        </label>
+        <button class="btn btn-save">Save picture</button>
+      </div>
+      <img src="assets/img/img.jpg" alt="image" />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <a class="github" href="#" target="_blank" rel="noopener noreferrer">Github</a>
+    </div>
+  </footer>
+  <script src="bg.js"></script>
+  <!---->
+</body>
+</html>
