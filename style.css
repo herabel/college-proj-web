@@ -103,6 +103,8 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior:smooth;
+  display: flex;
+  flex-direction: column;
 }
 header a:hover{
   color: #ffa600;
@@ -143,7 +145,6 @@ header {
   transition: 0.7s;
 }
 .main {
-  min-height: calc(100vh);
   padding: 0px 10px 0;
   display: flex;
   justify-content: space-between;
@@ -152,6 +153,7 @@ header {
   max-width: 50%;
   margin: 2vh auto;
   transition: 0.05s ease-out;
+  flex-grow: 1;
 }
 .center{
   align-items: center;
@@ -174,10 +176,10 @@ header {
   margin-bottom: 12px;
 }
 .main-content-text{
-  font-size: calc(10px + 1vh);
+  font-size: calc(10px + 1.4vh);
   text-align: left;
   margin-bottom: 5%;
-  transition: 0.7s;
+  transition: 0.05s;
 }
 .main-content-text a{
   text-decoration: none;
