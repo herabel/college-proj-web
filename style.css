@@ -385,6 +385,7 @@ header {
   #slides {
      max-width: calc(100% - 140px);
      margin: 0 auto;
+     transition: 0.7s;
   }
 }
 /*============*/
@@ -422,9 +423,6 @@ label:not(.btn) {
   color: #236ffc;
   font-size: 16px;
   transition: 0.7s;
-}
-label:hover {
-  color: #a304ff;
 }
 label:hover output {
   color: #ffffff;
@@ -476,6 +474,14 @@ output {
   padding: 2px;
   display: flex;
   justify-content: center;
+}
+.btn-container button:hover{
+  transition: 0.2s ease;
+  color: #a304ff;
+}
+label:hover {
+  color: #a304ff;
+  transition: 0.2s ease;
 }
 .btn-container > * {
   margin-right: 10px;
@@ -599,10 +605,10 @@ img {
 @media (max-width: 1024px) {
   .main{
     max-width: 80%;
-	margin-top: 0px;
+	  margin-top: 0px;
   }
   .main-content{
-	margin-top: 0px;
+	  margin-top: 0px;
   }
   .main-content-text{
     font-size: calc(6px + 2vw);
@@ -612,8 +618,7 @@ img {
   }
   .main-content-text img{
     width: 100%;
-    margin-top: 1.5vh;
-    margin-bottom: 1.6vh;
+    margin: 1.5vh 0px 1.5vh 0px;
   }
   .main {
     padding: 15px 0px 0px 0px;
@@ -646,12 +651,18 @@ img {
   .filters,
   .editor {
     max-width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .fullscreen {
     top: 15px;
     right: 20px;
     width: 40px;
     height: 40px;
+  }
+  .pseudo-label:not(.btn){
+    margin-right: 25vw;
+    margin-left: 20vw;
   }
 }
 @media (max-width: 375px) {
@@ -663,5 +674,9 @@ img {
   }
   .btn-container > * {
     margin: 3px;
+  }
+  .pseudo-label:not(.btn){
+    margin-right: 25vw;
+    margin-left: 0;
   }
 }
